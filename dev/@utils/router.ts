@@ -1,4 +1,4 @@
-import { signal } from "@mufw/maya/signal";
+import { signal } from "@cyftech/signal";
 
 const currentPath = signal(document.location.pathname);
 const currentHash = signal(document.location.hash);

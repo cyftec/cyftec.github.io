@@ -1,5 +1,6 @@
 import { m } from "@mufw/maya";
-import { App } from "./app";
+import { Footer, ViewFrame } from "../@elements";
+import { MayaHeader } from "./@components";
 
 export default () =>
   m.Html({
@@ -16,7 +17,7 @@ export default () =>
           }),
           m.Link({
             rel: "stylesheet",
-            href: "assets/styles.css",
+            href: "../assets/styles.css",
           }),
         ],
       }),
@@ -26,7 +27,24 @@ export default () =>
             src: "main.js",
             defer: true,
           }),
-          App(),
+          m.Div({
+            class: "bg-pale",
+            children: [
+              ViewFrame({
+                children: [
+                  MayaHeader("../"),
+                  m.Div({
+                    class: "pv3 ph5 flex-grow-1",
+                    children: "Maya UI home page",
+                  }),
+                ],
+              }),
+              Footer({
+                colorCss: "purple",
+                relativePathToRoot: "../",
+              }),
+            ],
+          }),
         ],
       }),
     ],

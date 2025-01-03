@@ -5,37 +5,65 @@ import { MayaHeader } from "../@components";
 export default () => {
   const navList = [
     {
-      label: "1. Before Start",
+      label: "1. Overview",
       nodes: [
         {
-          label: "Resources",
+          label: "Getting familiar",
           href: "/",
         },
         {
-          label: "Disclaimer",
-          href: "/",
-        },
-      ],
-    },
-    {
-      label: "2. Quickstart",
-      nodes: [
-        {
-          label: "Your first app",
+          label: "Prerequisite",
           href: "/",
         },
         {
-          label: "Understanding app structure",
+          label: "Installation",
+          href: "/",
+        },
+        {
+          label: "App structure",
           href: "/",
         },
         {
           label: "Brahma, Karma & Maya",
           href: "/",
         },
+        {
+          label: "Karma config",
+          href: "/",
+        },
       ],
     },
     {
-      label: "3. Tic Tac Toe",
+      label: "2. Brahma (CLI)",
+      nodes: [
+        {
+          label: "Why the CLI?",
+          href: "/",
+        },
+        {
+          label: "brahma create",
+          href: "/",
+        },
+        {
+          label: "brahma install",
+          href: "/",
+        },
+        {
+          label: "brahma add",
+          href: "/",
+        },
+        {
+          label: "brahma remove",
+          href: "/",
+        },
+        {
+          label: "brahma publish",
+          href: "/",
+        },
+      ],
+    },
+    {
+      label: "3. Maya",
       nodes: [
         {
           label: "Syntax",
@@ -61,14 +89,10 @@ export default () => {
           label: "Page",
           href: "/",
         },
-        {
-          label: "App structure",
-          href: "/",
-        },
       ],
     },
     {
-      label: "4. Todos List",
+      label: "4. Signal",
       nodes: [
         {
           label: "What is signal?",
@@ -93,7 +117,7 @@ export default () => {
       ],
     },
     {
-      label: "5. Living Room",
+      label: "5. Toolbox",
       nodes: [
         {
           label: "Default HTML page",
@@ -117,7 +141,7 @@ export default () => {
       m.Head({
         children: [
           m.Title({
-            children: "Maya Docs",
+            innerText: "Maya Docs",
           }),
           m.Link({
             rel: "stylesheet",
@@ -133,7 +157,7 @@ export default () => {
         children: [
           m.Script({
             src: "main.js",
-            defer: true,
+            defer: "true",
           }),
           m.Div({
             class: "bg-pale",
@@ -145,15 +169,8 @@ export default () => {
                     class: "flex mt3",
                     children: [
                       Navbar({
-                        children: m.For({
-                          items: navList,
-                          n: Infinity,
-                          nthChild: () =>
-                            m.P({
-                              class: "gray f6",
-                              children: "** end of list **",
-                            }),
-                          map: (nav) =>
+                        children: [
+                          ...navList.map((nav) =>
                             TitledList({
                               classNames: "mb4 pb3",
                               titleClassNames: "f4",
@@ -164,12 +181,17 @@ export default () => {
                                 href,
                                 label,
                               })),
-                            }),
-                        }),
+                            })
+                          ),
+                          m.P({
+                            class: "gray f6",
+                            innerText: "** end of list **",
+                          }),
+                        ],
                       }),
                       m.P({
                         class: "ph5 mt3 f5 gray flex-grow-1 space-mono",
-                        children: "Docs  >  Overview  >  Getting familiar",
+                        innerText: "Docs  >  Overview  >  Getting familiar",
                       }),
                     ],
                   }),

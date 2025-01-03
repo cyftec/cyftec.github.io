@@ -1,5 +1,5 @@
 import { m } from "@mufw/maya";
-import { derived } from "@mufw/maya/signal";
+import { derived } from "@cyftech/signal";
 import { Footer, Header, ViewFrame } from "./@elements";
 import { router } from "./@utils";
 
