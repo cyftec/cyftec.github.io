@@ -40,6 +40,8 @@ export const config: KarmaConfig = {
   git: {
     ignore: [
       ".DS_Store",
+      "karma-types.ts",
+      RG.BUN_LOCKB,
       RG.DOT_VSCODE_DIR,
       RG.DOT_ENV_FILE,
       RG.NODE_MODULES_DIR,
