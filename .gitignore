@@ -1,7 +1,7 @@
 .DS_Store
 karma-types.ts
 ./stage
-./docs
+./prod
 bun.lockb
 .vscode
 .env

@@ -4,7 +4,7 @@ const APP_ROOT_DIRNAME = "dev";
 
 const RG = {
   STAGING_DIRNAME: "stage",
-  PUBLISH_DIRNAME: "docs",
+  PUBLISH_DIRNAME: "prod",
   BUN_LOCKB: "bun.lockb",
   GIT_IGNORE: ".gitignore",
   DOT_VSCODE_DIR: ".vscode",
