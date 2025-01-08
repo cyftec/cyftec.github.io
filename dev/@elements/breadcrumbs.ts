@@ -1,11 +1,12 @@
-import { Component, m } from "@mufw/maya";
+import { Children, component, m } from "@mufw/maya";
 
 type BreadcrumbsProps = {
-  children: any;
+  children: Children;
 };
 
-export const Breadcrumbs: Component<BreadcrumbsProps> = ({ children }) =>
+export const Breadcrumbs = component<BreadcrumbsProps>(({ children }) =>
   m.Div({
     class: "flex items-center",
-    children: children.value,
-  });
+    children: children,
+  })
+);

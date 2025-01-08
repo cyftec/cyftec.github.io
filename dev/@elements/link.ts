@@ -1,5 +1,5 @@
-import { dstring, val } from "@cyftech/signal";
-import { Component, m } from "@mufw/maya";
+import { dstring } from "@cyftech/signal";
+import { component, m } from "@mufw/maya";
 
 type LinkProps = {
   classNames?: string;
@@ -10,18 +10,16 @@ type LinkProps = {
   label: string;
 };
 
-export const Link: Component<LinkProps> = ({
-  classNames,
-  colorCss,
-  target,
-  isSelected,
-  href,
-  label,
-}) =>
-  m.A({
-    class: dstring`link underline ${() => val(colorCss) || "red"} ${() =>
-      val(isSelected) ? `bg-${val(colorCss) || "red"}` : ""} ${classNames}`,
-    target: target,
-    href: href,
-    children: label,
-  });
+export const Link = component<LinkProps>(
+  ({ classNames, colorCss, target, isSelected, href, label }) => {
+    return m.A({
+      class: dstring`link underline ${() => colorCss?.value || "red"} ${() =>
+        isSelected?.value
+          ? `bg-${colorCss?.value || "red"}`
+          : ""} ${classNames}`,
+      target: target,
+      href: href,
+      children: label,
+    });
+  }
+);

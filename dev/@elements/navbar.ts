@@ -1,10 +1,10 @@
-import { ChildrenProp, Component, m } from "@mufw/maya";
+import { Children, component, m } from "@mufw/maya";
 
 type NavbarProps = {
-  children: ChildrenProp;
+  children: Children;
 };
 
-export const Navbar: Component<NavbarProps> = ({ children }) => {
+export const Navbar = component<NavbarProps>(({ children }) => {
   return m.Div({
     class: `dn db-ns w5 pa3 max-h-80 overflow-y-scroll`,
     style: `
@@ -13,4 +13,4 @@ export const Navbar: Component<NavbarProps> = ({ children }) => {
     `,
     children,
   });
-};
+});

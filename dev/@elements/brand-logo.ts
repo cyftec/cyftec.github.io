@@ -1,5 +1,5 @@
-import { dstring, val } from "@cyftech/signal";
-import { Child, Component, m } from "@mufw/maya";
+import { dstring } from "@cyftech/signal";
+import { Child, component, m } from "@mufw/maya";
 
 type BrandLogoProps = {
   logoSrc: string;
@@ -8,26 +8,23 @@ type BrandLogoProps = {
   labelComponent?: Child;
 };
 
-export const BrandLogo: Component<BrandLogoProps> = ({
-  logoSrc,
-  logoHref,
-  logoSize,
-  labelComponent,
-}) => {
-  const size = dstring`${() => val(logoSize) || 32}`;
-  return m.A({
-    class: "space-mono link black flex items-center justify-start",
-    href: logoHref,
-    children: [
-      m.Img({
-        src: logoSrc,
-        height: size,
-        width: size,
-      }),
-      m.If({
-        condition: labelComponent,
-        whenTruthy: () => labelComponent as Child,
-      }),
-    ],
-  });
-};
+export const BrandLogo = component<BrandLogoProps>(
+  ({ logoSrc, logoHref, logoSize, labelComponent }) => {
+    const size = dstring`${() => logoSize?.value || 32}`;
+    return m.A({
+      class: "space-mono link black flex items-center justify-start",
+      href: logoHref,
+      children: [
+        m.Img({
+          src: logoSrc,
+          height: size,
+          width: size,
+        }),
+        m.If({
+          condition: labelComponent,
+          isTruthy: labelComponent as Child,
+        }),
+      ],
+    });
+  }
+);

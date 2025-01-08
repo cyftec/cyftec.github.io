@@ -1,9 +1,8 @@
-import { Component, m } from "@mufw/maya";
+import { m } from "@mufw/maya";
 import { Header } from "../@elements";
 
 export const CyferHeader = () => {
   const endpoint = document.location.hash;
-  console.log(endpoint);
   return Header({
     logoHref: "/",
     logoSrc: "assets/images/cyfer-logo.png",

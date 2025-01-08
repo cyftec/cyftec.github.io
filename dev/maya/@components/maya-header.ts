@@ -3,7 +3,6 @@ import { Header, Link } from "../../@elements";
 
 export const MayaHeader = (relativePathToRoot: string) => {
   const endpoint = document.location.pathname;
-  console.log(endpoint);
   return Header({
     logoHref: "/maya",
     logoSrc: `${relativePathToRoot}assets/images/maya-logo.png`,
