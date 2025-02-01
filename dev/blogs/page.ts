@@ -1,83 +1,59 @@
-import { m } from "@mufw/maya";
-import { CyferHeader } from "../@components";
-import { Footer, ViewFrame } from "../@elements";
+import { m, MHtmlElementGetter } from "@mufw/maya";
+import { Page } from "../../libs/components";
+import { Navbar, ViewFrame } from "../../libs/elements";
+import { BLOGS } from "./@libs/content";
+import { dstring } from "@cyftech/signal";
 
-export default m.Html({
-  lang: "en",
-  children: [
-    m.Head({
+export default Page({
+  title: "Blogs",
+  app: ViewFrame({
+    contentClassNames: "pt4 pb5",
+    children: m.Div({
+      class: "gray grid grid-col-2-5 gap2",
       children: [
-        m.Title({
-          children: "Blogs",
-        }),
-        m.Link({
-          rel: "stylesheet",
-          href: "https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css",
-        }),
-        m.Link({
-          rel: "stylesheet",
-          href: "../assets/styles.css",
-        }),
-      ],
-    }),
-    m.Body({
-      children: [
-        m.Script({
-          src: "main.js",
-          defer: true,
+        Navbar({
+          classNames: "pa2 sticky top-55",
+          children: m.For({
+            items: [
+              ...BLOGS.map((b) => b.title),
+              ...BLOGS.map((b) => b.title),
+              ...BLOGS.map((b) => b.title),
+              ...BLOGS.map((b) => b.title),
+            ],
+            map: (title, i) =>
+              m.Div({
+                class: dstring`ba br3 pa3 mb3 ${
+                  i === 4
+                    ? "b--transparent b black"
+                    : "b--near-white moon-gray shadow-hover"
+                }`,
+                children: title,
+              }),
+          }),
         }),
         m.Div({
-          class: "bg-pale",
-          children: [
-            ViewFrame({
-              classNames: "items-center justify-center",
-              // contentClassNames: "pa3",
-              children: [
-                CyferHeader(),
-                m.Div({
-                  class: "mv6 pv4 w-50 center",
-                  children: [
-                    m.P({
-                      class: "tc i space-mono f1",
-                      children: `"don't be evil"`,
-                    }),
-                    m.P({
-                      class: "tc nt3 f3 lh-copy",
-                      children: `- an echo from the past`,
-                    }),
-                  ],
-                }),
-                m.Div({
-                  children: [
-                    m.P({
-                      id: "products",
-                      class: "f2 space-mono lh-copy",
-                      children: "# products",
-                    }),
-                    m.P({
-                      id: "blogs",
-                      class: "f2 space-mono lh-copy",
-                      children: "# blogs",
-                    }),
-                    m.Div({
-                      children: [
-                        m.P({
-                          id: "about-us",
-                          class: "f2 space-mono lh-copy",
-                          children: "# about us",
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              ],
+          children: m.For({
+            items: BLOGS[0].paras,
+            n: 0,
+            nthChild: m.H1({
+              class: "mv0",
+              children: BLOGS[0].title,
             }),
-            Footer({
-              relativePathToRoot: "../",
-            }),
-          ],
+            map: (para) =>
+              m.If({
+                condition: para.startsWith("##"),
+                isTruthy: m.H3({
+                  class: "mt4 mb2",
+                  children: para.replaceAll("##", ""),
+                }),
+                isFalsy: m.P({
+                  class: "lh-copy",
+                  children: para,
+                }),
+              }),
+          }),
         }),
       ],
     }),
-  ],
+  }),
 });
