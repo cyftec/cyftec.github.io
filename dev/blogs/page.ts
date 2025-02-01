@@ -14,7 +14,7 @@ export default Page({
         Navbar({
           classNames: "pa2 sticky top-55",
           children: m.For({
-            items: [
+            subject: [
               ...BLOGS.map((b) => b.title),
               ...BLOGS.map((b) => b.title),
               ...BLOGS.map((b) => b.title),
@@ -33,7 +33,7 @@ export default Page({
         }),
         m.Div({
           children: m.For({
-            items: BLOGS[0].paras,
+            subject: BLOGS[0].paras,
             n: 0,
             nthChild: m.H1({
               class: "mv0",
@@ -41,7 +41,7 @@ export default Page({
             }),
             map: (para) =>
               m.If({
-                condition: para.startsWith("##"),
+                subject: para.startsWith("##"),
                 isTruthy: m.H3({
                   class: "mt4 mb2",
                   children: para.replaceAll("##", ""),

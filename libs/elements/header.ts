@@ -38,7 +38,7 @@ export const Header = component<HeaderProps>(
         m.Div({
           class: "flex items-center justify-end",
           children: m.For({
-            items: links,
+            subject: links,
             itemKey: "label",
             n: rightmostComponent ? Infinity : -1,
             nthChild: rightmostComponent as Child,

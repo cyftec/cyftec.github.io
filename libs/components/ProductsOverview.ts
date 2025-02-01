@@ -20,7 +20,7 @@ export const ProductsOverview = m.Div([
       m.Div({
         class: "flex flex-wrap justify-between",
         children: m.For({
-          items: PRODUCTS_SHOWCASE.products,
+          subject: PRODUCTS_SHOWCASE.products,
           map: ({ title, subtitle, size, logoSrc, description }) =>
             m.Div({
               class: "w-45 mb4",
@@ -45,7 +45,7 @@ export const ProductsOverview = m.Div([
                 m.Div({
                   class: "mt3 silver",
                   children: m.For({
-                    items: description,
+                    subject: description,
                     map: (para) =>
                       m.P({
                         class: "mt0 mb3",

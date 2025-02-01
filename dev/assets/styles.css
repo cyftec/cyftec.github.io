@@ -5,6 +5,7 @@
 :root { --pcolor: red; }
 body { font-family: 'Sometype Mono', monospace;   scrollbar-color: #e8e8e8 #f2f1f0;  scrollbar-width: thin; }
 
+.lh-tall { line-height: 2rem; }
 .underline:hover { text-decoration: underline;}
 .link { text-decoration: none; transition: var(--pcolor) .15s ease-in; }
 .link:hover { transition: var(--pcolor) .15s ease-in;  }

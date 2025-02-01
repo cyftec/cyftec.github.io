@@ -7,7 +7,6 @@ export const projectFileNames: ProjectFileNames = {
   },
   static: {
     sourceDir: "dev",
-    libsDir: "libs",
     karmaTypesFile: "karma-types.ts",
   },
   generated: {
@@ -50,7 +49,7 @@ export const config: KarmaConfig = {
     sourceDirName: projectFileNames.static.sourceDir,
     packageJson: {
       dependencies: {
-        "@mufw/maya": "0.1.13",
+        "@mufw/maya": "0.1.14",
         "@cyftech/immutjs": "0.1.0",
         "@cyftech/signal": "0.1.4",
       },
@@ -82,7 +81,6 @@ export const config: KarmaConfig = {
       projectFileNames.generated.nodeModulesDir,
       projectFileNames.generated.packageJsonFile,
       `/${projectFileNames.generated.stagingDir}`,
-      `/${projectFileNames.generated.publishDir}`,
     ],
   },
 };

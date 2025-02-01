@@ -1,10 +1,11 @@
-import { Child, component, m } from "@mufw/maya";
-import { Footer } from "./Footer";
+import { Children, component, m } from "@mufw/maya";
+import { ViewFrame } from "../elements";
 import { CyferHeader } from "./CyferHeader";
+import { Footer } from "./Footer";
 
 type PageProps = {
   title: string;
-  app: Child;
+  app: Children;
 };
 
 export const Page = component<PageProps>(({ title, app: appChildElement }) => {
@@ -26,7 +27,9 @@ export const Page = component<PageProps>(({ title, app: appChildElement }) => {
       m.Body([
         m.Script({ src: "main.js", defer: true }),
         CyferHeader(),
-        appChildElement,
+        ViewFrame({
+          children: appChildElement,
+        }),
         Footer,
       ]),
     ],
