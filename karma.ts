@@ -1,13 +1,18 @@
 import type { KarmaConfig, ProjectFileNames } from "./karma-types.ts";
 
 // DO NOT CHANGE exported variable name
-export const projectFileNames: ProjectFileNames = {
-  systemGenerated: {
-    dsStoreDir: ".DS_Store",
-  },
+export const projectFileNames = {
   static: {
     sourceDir: "dev",
     karmaTypesFile: "karma-types.ts",
+  },
+  buildable: {
+    mayaSrcDir: "dev/view/pages",
+    pageFile: "page.ts",
+    manifestFile: "manifest.ts",
+  },
+  systemGenerated: {
+    dsStoreDir: ".DS_Store",
   },
   generated: {
     stagingDir: "stage",
@@ -19,40 +24,36 @@ export const projectFileNames: ProjectFileNames = {
     nodeModulesDir: "node_modules",
     packageJsonFile: "package.json",
   },
-  buildable: {
-    pageFile: "page.ts",
-    manifestFile: "manifest.ts",
-  },
-};
+} as const satisfies ProjectFileNames;
 
 // DO NOT CHANGE exported variable name
 export const config: KarmaConfig = {
   brahma: {
+    version: "0.1.31",
     build: {
-      stagingDirName: projectFileNames.generated.stagingDir,
-      publishDirName: projectFileNames.generated.publishDir,
+      mode: "web",
+      skipErrorAndBuildNext: false,
+      ignoreDelimiter: "@",
+      sourceDirName: projectFileNames.static.sourceDir,
+      mayaSrcDir: projectFileNames.buildable.mayaSrcDir,
       buildablePageFileName: projectFileNames.buildable.pageFile,
       buildableManifestFileName: projectFileNames.buildable.manifestFile,
-      ignoreDelimiter: "@",
-      skipErrorAndBuildNext: false,
+      stagingDirName: projectFileNames.generated.stagingDir,
+      publishDirName: projectFileNames.generated.publishDir,
     },
-    localServer: {
+    serve: {
       port: 3000,
       redirectOnStart: false,
       reloadPageOnFocus: true,
-      otherWatchDirs: [`${projectFileNames.static.libsDir}`],
-      serveDirectory: `${projectFileNames.generated.stagingDir}`,
+      watchDir: projectFileNames.static.sourceDir,
+      serveDir: projectFileNames.generated.stagingDir,
     },
   },
-  maya: {
-    mode: "web",
-    sourceDirName: projectFileNames.static.sourceDir,
-    packageJson: {
-      dependencies: {
-        "@mufw/maya": "0.1.14",
-        "@cyftech/immutjs": "0.1.0",
-        "@cyftech/signal": "0.1.4",
-      },
+  packageJson: {
+    dependencies: {
+      "@mufw/maya": "0.1.32",
+      "@cyftech/immutjs": "0.1.0",
+      "@cyftech/signal": "0.1.15",
     },
   },
   vscode: {
