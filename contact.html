@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Cyfer Tech</title>
+    <meta
+      name="description"
+      content="Contact Cyfer Tech about products, sponsorships, and partnership opportunities."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">CY</span><span>Cyfer Tech</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M4 7h16M4 12h16M4 17h16"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            /></svg
+        ></button>
+        <div class="nav-links">
+          <a href="index.html">Portfolio</a>
+          <a href="products.html">Products</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="sponsorship.html">Sponsorship</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="form-shell">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h1>Let’s map the right next step.</h1>
+            <p class="lead"
+              >Use this static form layout for product demos, sponsorship
+              inquiries, or partnership requests. It is ready to connect to
+              Formspree, Netlify Forms, or any backend endpoint.</p
+            >
+          </div>
+          <form data-static-form>
+            <label>
+              Name
+              <input name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Work email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              Inquiry type
+              <select name="type" required>
+                <option value="">Select an option</option>
+                <option>Product demo</option>
+                <option>Sponsorship</option>
+                <option>Partnership</option>
+                <option>Press or research</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea name="message" required></textarea>
+            </label>
+            <button class="button primary" type="submit">Send message</button>
+            <p data-form-notice aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"
+      ><div class="footer-inner"
+        ><span>Cyfer Tech</span><span>hello@northstarlabs.example</span></div
+      ></footer
+    >
+    <script src="script.js"></script>
+  </body>
+</html>
