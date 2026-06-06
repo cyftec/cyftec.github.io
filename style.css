@@ -253,6 +253,31 @@ h3 {
 
 .card p { color: var(--muted); margin: 0; }
 
+.home-next {
+  padding-top: 54px;
+}
+
+.focus-card {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.focus-card h3 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 14px;
+}
+
+.focus-card .eyebrow {
+  margin-bottom: 12px;
+}
+
+.focus-card .button {
+  align-self: flex-start;
+}
+
 .icon-box {
   width: 46px;
   height: 46px;
