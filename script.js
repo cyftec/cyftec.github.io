@@ -9,9 +9,10 @@ if (toggle && navLinks) {
 }
 
 const currentPath = window.location.pathname.split("/").pop() || "index.html";
+const activePath = currentPath === "blog-detail.html" ? "blogs.html" : currentPath;
 document.querySelectorAll(".nav-links a").forEach((link) => {
   const href = link.getAttribute("href");
-  if (href === currentPath) {
+  if (href === activePath) {
     link.setAttribute("aria-current", "page");
   }
 });

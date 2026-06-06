@@ -412,6 +412,74 @@ h3 {
   font-size: .86rem;
 }
 
+.article-layout {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 76px 24px 88px;
+}
+
+.article-header {
+  margin-bottom: 34px;
+}
+
+.article-header h1 {
+  max-width: 860px;
+  font-size: clamp(2.7rem, 5.7vw, 5.5rem);
+}
+
+.article-hero-art {
+  min-height: 360px;
+  border-radius: 8px;
+  margin: 34px 0;
+  background:
+    linear-gradient(135deg, rgba(222, 66, 19, .92), rgba(17, 24, 39, .96)),
+    repeating-linear-gradient(90deg, transparent 0 30px, rgba(255,255,255,.11) 30px 31px);
+  display: grid;
+  place-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.article-hero-art svg {
+  width: min(74%, 480px);
+  height: auto;
+}
+
+.article-body {
+  background: white;
+  border: 1px solid var(--theme-bg);
+  border-radius: 8px;
+  padding: 42px;
+}
+
+.article-body p {
+  color: #354052;
+  font-size: 1.08rem;
+  margin: 0 0 22px;
+}
+
+.article-body h2 {
+  font-size: clamp(1.7rem, 2.5vw, 2.35rem);
+  margin-top: 42px;
+}
+
+.article-body ul {
+  margin: 0 0 24px;
+  padding-left: 22px;
+  color: #354052;
+}
+
+.article-body li { margin-bottom: 10px; }
+
+.article-callout {
+  margin: 34px 0;
+  padding: 24px;
+  border-left: 5px solid var(--theme);
+  background: var(--theme-bg);
+  color: var(--ink);
+  font-weight: 800;
+}
+
 .feature-list {
   margin: 18px 0 0;
   padding: 0;
@@ -582,6 +650,9 @@ textarea { min-height: 138px; resize: vertical; }
   .blog-hero { padding-top: 42px; }
   .post-content { padding: 26px; }
   .post-media { min-height: 240px; }
+  .article-layout { padding: 42px 18px 58px; }
+  .article-body { padding: 26px; }
+  .article-hero-art { min-height: 240px; }
 
   h1 { font-size: clamp(2.55rem, 14vw, 4.2rem); }
 

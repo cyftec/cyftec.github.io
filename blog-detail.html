@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Designing Operational Software | Cyfer Tech Blog</title>
+    <meta
+      name="description"
+      content="A full Cyfer Tech blog article about designing operational software that teams can trust under pressure."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Cyfer Tech home">
+          <span class="brand-mark">CY</span>
+          <span>Cyfer Tech</span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+        >
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M4 7h16M4 12h16M4 17h16"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <div class="nav-links">
+          <a href="index.html">Portfolio</a>
+          <a href="products.html">Products</a>
+          <a href="blogs.html" aria-current="page">Blogs</a>
+          <a href="sponsorship.html">Sponsorship</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <article class="article-layout">
+        <header class="article-header">
+          <p class="post-meta"
+            ><span>Product engineering</span><span>8 min read</span
+            ><span>Cyfer Tech Blog</span></p
+          >
+          <h1>Designing operational software that people can trust under pressure.</h1>
+          <p class="lead">
+            Reliability is not only uptime. It is the combination of clear data,
+            predictable workflows, sensible defaults, and interfaces that help
+            teams act without hesitation.
+          </p>
+        </header>
+
+        <div class="article-hero-art" aria-hidden="true">
+          <svg viewBox="0 0 420 270" fill="none">
+            <rect x="42" y="44" width="336" height="182" rx="22" fill="rgba(255,255,255,.12)" />
+            <rect x="82" y="78" width="130" height="16" rx="8" fill="white" />
+            <rect x="82" y="111" width="224" height="12" rx="6" fill="rgba(255,255,255,.52)" />
+            <path d="M92 183c38-58 82-62 126-15 42 44 88 40 150-45" stroke="white" stroke-width="16" stroke-linecap="round" />
+            <circle cx="92" cy="183" r="13" fill="#f2b84b" />
+            <circle cx="218" cy="168" r="13" fill="#ffffff" />
+            <circle cx="368" cy="123" r="13" fill="#f2b84b" />
+          </svg>
+        </div>
+
+        <div class="article-body">
+          <p>
+            Operational software usually fails in quiet ways before it fails in
+            obvious ones. Teams hesitate because the interface does not explain
+            what changed. Approvals slow down because ownership is unclear.
+            Dashboards look complete but do not reveal what action should happen
+            next.
+          </p>
+          <p>
+            A trustworthy product handles those moments directly. It gives users
+            enough context to understand a situation, enough structure to act
+            consistently, and enough flexibility to handle exceptions without
+            breaking the process.
+          </p>
+
+          <h2>Start with the decision, not the dashboard.</h2>
+          <p>
+            Many product teams begin by arranging metrics. That is useful, but
+            incomplete. The better starting point is the decision the user needs
+            to make: approve, escalate, retry, assign, pause, or investigate.
+          </p>
+          <p>
+            Once the decision is clear, the interface can prioritize the few
+            signals that matter. Status, confidence, ownership, dependency, and
+            impact usually matter more than a larger pile of raw data.
+          </p>
+
+          <div class="article-callout">
+            A system feels reliable when the next responsible action is obvious,
+            even when the underlying situation is complex.
+          </div>
+
+          <h2>Make automation observable.</h2>
+          <p>
+            Automation should not become a hidden layer that only engineers can
+            explain. Operators need to see why something moved, which rule fired,
+            what data was used, and where the workflow will go next.
+          </p>
+          <ul>
+            <li>Show the source event or trigger behind automated actions.</li>
+            <li>Expose the current owner and next handoff.</li>
+            <li>Keep a clear audit trail for overrides and exceptions.</li>
+            <li>Use sensible defaults, but make manual correction available.</li>
+          </ul>
+
+          <h2>Design exception paths as primary paths.</h2>
+          <p>
+            Real operations contain missing data, late approvals, edge-case
+            customers, external system delays, and conflicting priorities. If the
+            product treats those cases as rare afterthoughts, users will build
+            workarounds outside the system.
+          </p>
+          <p>
+            Strong operational software includes exception handling as a first
+            class product surface. It makes escalation clear, captures context,
+            and returns the workflow to a stable state after the issue is
+            resolved.
+          </p>
+
+          <h2>Keep the product explainable.</h2>
+          <p>
+            Trust depends on explanation. A user should be able to answer: what
+            happened, why it happened, who owns it, what changed, and what should
+            happen next. If the interface cannot answer those questions, the
+            system will feel fragile even if the infrastructure is sound.
+          </p>
+          <p>
+            This is the standard Cyfer Tech uses when shaping product
+            experiences across data, automation, and security workflows. The goal
+            is not more software surface. The goal is better operational
+            judgment at the exact moment teams need it.
+          </p>
+
+          <div class="actions">
+            <a class="button secondary" href="blogs.html">Back to blogs</a>
+            <a class="button primary" href="contact.html">Talk to Cyfer Tech</a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>Cyfer Tech</span>
+        <span>Full article from the Cyfer Tech blog.</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
