@@ -419,7 +419,7 @@ h3 {
   font-size: .76rem;
   color: var(--theme);
   background: var(--theme-bg);
-  margin: 0 0.5rem 0.5rem 0;
+  margin: 0 0.5rem 0 0;
 }
 
 .product-list {
