@@ -388,6 +388,27 @@ h3 {
   justify-self: start; 
 }
 
+.product-card .product-cta {
+  grid-column: 2;
+  justify-self: start;
+}
+
+.product-cta {
+  min-height: 40px;
+  padding: 9px 13px;
+  border-color: var(--border-light);
+}
+
+.package-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.package-card .product-cta {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
 .badge {
   display: flex;
   align-items: center;
@@ -405,6 +426,29 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+}
+
+.coming-soon {
+  max-width: var(--max);
+  min-height: calc(100vh - 76px);
+  margin: 0 auto;
+  padding: 96px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coming-soon h1 {
+  max-width: 980px;
+  margin-bottom: 22px;
+  font-size: clamp(3.4rem, 8vw, 8.5rem);
+}
+
+.coming-soon p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.15rem, 2vw, 1.7rem);
+  font-weight: 700;
 }
 
 .blog-hero {
@@ -726,6 +770,10 @@ textarea { min-height: 138px; resize: vertical; }
 
   .section { padding: 58px 18px; }
   .hero { padding: 42px 18px 42px; } 
+  .coming-soon {
+    min-height: calc(100vh - 68px);
+    padding: 72px 18px;
+  }
 
   .blog-hero { padding-top: 42px; }
   .post-content { padding: 26px; }
