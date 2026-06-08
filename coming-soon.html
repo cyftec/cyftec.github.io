@@ -4,17 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Details coming soon | Cyfer Tech</title>
-    <meta
-      name="description"
-      content="Details are coming soon on Cyfer Tech."
-    />
+    <meta name="description" content="Details are coming soon on Cyfer Tech." />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="index.html" aria-label="Cyfer Tech home">
-          <span class="brand-mark">CY</span>
+        <a class="brand" href="index.html">
+          <img src="assets/cyfer-logo.svg" alt="Cyfer Tech home" />
           <span>Cyfer Tech</span>
         </a>
         <button
@@ -58,7 +55,9 @@
     </footer>
     <script src="script.js"></script>
     <script>
-      const pageTitle = new URLSearchParams(window.location.search).get("title");
+      const pageTitle = new URLSearchParams(window.location.search).get(
+        "title",
+      );
       const heading = document.querySelector("#coming-soon-title");
 
       if (pageTitle && heading) {

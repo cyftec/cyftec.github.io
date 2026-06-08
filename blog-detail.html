@@ -13,8 +13,8 @@
   <body>
     <header class="site-header">
       <nav class="nav" aria-label="Primary navigation">
-        <a class="brand" href="index.html" aria-label="Cyfer Tech home">
-          <span class="brand-mark">CY</span>
+        <a class="brand" href="index.html">
+          <img src="assets/cyfer-logo.svg" alt="Cyfer Tech home" />
           <span>Cyfer Tech</span>
         </a>
         <button
@@ -49,7 +49,10 @@
             ><span>Product engineering</span><span>8 min read</span
             ><span>Cyfer Tech Blog</span></p
           >
-          <h1>Designing operational software that people can trust under pressure.</h1>
+          <h1
+            >Designing operational software that people can trust under
+            pressure.</h1
+          >
           <p class="lead">
             Reliability is not only uptime. It is the combination of clear data,
             predictable workflows, sensible defaults, and interfaces that help
@@ -59,10 +62,29 @@
 
         <div class="article-hero-art" aria-hidden="true">
           <svg viewBox="0 0 420 270" fill="none">
-            <rect x="42" y="44" width="336" height="182" rx="22" fill="rgba(255,255,255,.12)" />
+            <rect
+              x="42"
+              y="44"
+              width="336"
+              height="182"
+              rx="22"
+              fill="rgba(255,255,255,.12)"
+            />
             <rect x="82" y="78" width="130" height="16" rx="8" fill="white" />
-            <rect x="82" y="111" width="224" height="12" rx="6" fill="rgba(255,255,255,.52)" />
-            <path d="M92 183c38-58 82-62 126-15 42 44 88 40 150-45" stroke="white" stroke-width="16" stroke-linecap="round" />
+            <rect
+              x="82"
+              y="111"
+              width="224"
+              height="12"
+              rx="6"
+              fill="rgba(255,255,255,.52)"
+            />
+            <path
+              d="M92 183c38-58 82-62 126-15 42 44 88 40 150-45"
+              stroke="white"
+              stroke-width="16"
+              stroke-linecap="round"
+            />
             <circle cx="92" cy="183" r="13" fill="#f2b84b" />
             <circle cx="218" cy="168" r="13" fill="#ffffff" />
             <circle cx="368" cy="123" r="13" fill="#f2b84b" />
@@ -104,22 +126,24 @@
           <h2>Make automation observable.</h2>
           <p>
             Automation should not become a hidden layer that only engineers can
-            explain. Operators need to see why something moved, which rule fired,
-            what data was used, and where the workflow will go next.
+            explain. Operators need to see why something moved, which rule
+            fired, what data was used, and where the workflow will go next.
           </p>
           <ul>
             <li>Show the source event or trigger behind automated actions.</li>
             <li>Expose the current owner and next handoff.</li>
             <li>Keep a clear audit trail for overrides and exceptions.</li>
-            <li>Use sensible defaults, but make manual correction available.</li>
+            <li
+              >Use sensible defaults, but make manual correction available.</li
+            >
           </ul>
 
           <h2>Design exception paths as primary paths.</h2>
           <p>
             Real operations contain missing data, late approvals, edge-case
-            customers, external system delays, and conflicting priorities. If the
-            product treats those cases as rare afterthoughts, users will build
-            workarounds outside the system.
+            customers, external system delays, and conflicting priorities. If
+            the product treats those cases as rare afterthoughts, users will
+            build workarounds outside the system.
           </p>
           <p>
             Strong operational software includes exception handling as a first
@@ -131,14 +155,14 @@
           <h2>Keep the product explainable.</h2>
           <p>
             Trust depends on explanation. A user should be able to answer: what
-            happened, why it happened, who owns it, what changed, and what should
-            happen next. If the interface cannot answer those questions, the
-            system will feel fragile even if the infrastructure is sound.
+            happened, why it happened, who owns it, what changed, and what
+            should happen next. If the interface cannot answer those questions,
+            the system will feel fragile even if the infrastructure is sound.
           </p>
           <p>
             This is the standard Cyfer Tech uses when shaping product
-            experiences across data, automation, and security workflows. The goal
-            is not more software surface. The goal is better operational
+            experiences across data, automation, and security workflows. The
+            goal is not more software surface. The goal is better operational
             judgment at the exact moment teams need it.
           </p>
 
