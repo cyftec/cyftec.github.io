@@ -35,3 +35,20 @@ document.querySelectorAll("form[data-mailto-form]").forEach((form) => {
     }
   });
 });
+
+const scrollHint = document.querySelector("[data-scroll-hint]");
+const portfolioContent = document.querySelector("#portfolio-content");
+
+if (scrollHint && portfolioContent) {
+  const setScrollHintVisibility = () => {
+    scrollHint.classList.toggle("is-hidden", window.scrollY > 20);
+  };
+
+  scrollHint.addEventListener("click", () => {
+    portfolioContent.scrollIntoView({ behavior: "smooth", block: "start" });
+    scrollHint.classList.add("is-hidden");
+  });
+
+  window.addEventListener("scroll", setScrollHintVisibility, { passive: true });
+  setScrollHintVisibility();
+}

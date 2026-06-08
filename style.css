@@ -142,7 +142,7 @@ a {
   max-width: var(--max);
   margin: 0 auto;
   min-height: auto;
-  padding: 84px 24px 54px;
+  padding: 8rem 1.5rem 4rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(360px, 0.92fr);
   gap: 48px;
@@ -322,8 +322,9 @@ h3 {
 }
 
 .brand-message {
+  position: relative;
   min-height: calc(100vh - 76px);
-  padding: 76px 24px;
+  padding: 26px 24px 126px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -349,7 +350,7 @@ h3 {
   line-height: 0.82;
 }
 
-.brand-message p:last-child {
+.brand-message p {
   max-width: 820px;
   margin: 0;
   max-width: var(--max);
@@ -359,6 +360,45 @@ h3 {
   line-height: 1.25;
   margin-left: auto;
   margin-right: auto;
+}
+
+.scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  box-shadow: 0 0.25rem 20px 0px rgb(199, 199, 199);
+  background: white;
+  color: var(--ink);
+  cursor: pointer;
+  transform: translateX(-50%);
+  transition:
+    opacity 160ms ease,
+    visibility 160ms ease,
+    transform 160ms ease;
+}
+
+.scroll-hint svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.scroll-hint:hover {
+  color: var(--theme);
+  border-color: var(--theme-bg);
+}
+
+.scroll-hint.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
 }
 
 .home-next {
@@ -929,7 +969,7 @@ textarea {
   font-size: 0.88rem;
 }
 
-.footer-products a + a::before {
+.footer-products a+a::before {
   content: "\2022";
   margin-right: 10px;
   color: var(--muted);
@@ -984,7 +1024,7 @@ textarea {
   }
 
   .hero {
-    padding-top: 46px;
+    padding-top: 8rem;
     min-height: auto;
   }
 
@@ -1047,7 +1087,11 @@ textarea {
   }
 
   .hero {
-    padding: 42px 18px 42px;
+    padding: 7rem 1rem 3rem;
+  }
+
+  .scroll-hint {
+    bottom: 2rem;
   }
 
   .coming-soon {
