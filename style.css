@@ -791,6 +791,59 @@ h3 {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.presence-section {
+  padding-top: 52px;
+  padding-bottom: 24px;
+}
+
+.presence-section .section-head {
+  margin-bottom: 18px;
+}
+
+.presence-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.presence-link {
+  min-height: 58px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.presence-link:hover {
+  color: var(--theme);
+  border-color: var(--theme-bg);
+}
+
+.presence-mark {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--theme-bg);
+  color: var(--theme);
+}
+
+.presence-mark svg {
+  width: 19px;
+  height: 19px;
+}
+
+.presence-mark.npm-mark svg {
+  width: 22px;
+  height: 22px;
+}
+
 .form-shell {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -875,6 +928,7 @@ textarea {
   .metrics,
   .grid.three,
   .product-list,
+  .presence-links,
   .tiers,
   .logos {
     grid-template-columns: repeat(2, 1fr);
@@ -974,6 +1028,7 @@ textarea {
   .grid.two,
   .grid.three,
   .product-list,
+  .presence-links,
   .tiers,
   .logos {
     grid-template-columns: 1fr;
