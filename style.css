@@ -850,6 +850,12 @@ textarea {
 }
 
 @media (max-width: 920px) {
+
+  .product-heading img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
   .brand img {
     width: 2.25rem;
     height: 2.25rem;
@@ -876,6 +882,12 @@ textarea {
 }
 
 @media (max-width: 700px) {
+
+  .product-heading img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   .brand img {
     width: 2rem;
     height: 2rem;
