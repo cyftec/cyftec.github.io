@@ -45,14 +45,32 @@
         <div class="form-shell">
           <div>
             <p class="eyebrow">Contact</p>
-            <h1>Let’s map the right next step.</h1>
+            <h1>Let’s talk.</h1>
             <p class="lead"
-              >Use this static form layout for product demos, sponsorship
-              inquiries, or partnership requests. It is ready to connect to
-              Formspree, Netlify Forms, or any backend endpoint.</p
+              >Need a website or PWA app built for your business? Let's talk.
+              Have any pain points using our products or want to give us some
+              suggestion? Let's talk. Or, want to collaborate with us
+              straightaway or fund us with donation or sponsorship, but not
+              sure? Talk to us. Or, you are simply happy with our work and
+              contribution and want to share this happiness with us? Drop an
+              email already. Use this form to send us an email for your intended
+              enquiry.</p
             >
           </div>
           <form data-static-form>
+            <label>
+              Inquiry type
+              <select name="type" required>
+                <option value="">Select an option</option>
+                <option>Website or PWA development service</option>
+                <option>Complaint</option>
+                <option>Suggestion</option>
+                <option>Collaboration</option>
+                <option>Funding</option>
+                <option>Invitation</option>
+                <option>Other</option>
+              </select>
+            </label>
             <label>
               Name
               <input name="name" autocomplete="name" required />
@@ -60,16 +78,6 @@
             <label>
               Work email
               <input type="email" name="email" autocomplete="email" required />
-            </label>
-            <label>
-              Inquiry type
-              <select name="type" required>
-                <option value="">Select an option</option>
-                <option>Product demo</option>
-                <option>Sponsorship</option>
-                <option>Partnership</option>
-                <option>Press or research</option>
-              </select>
             </label>
             <label>
               Message
