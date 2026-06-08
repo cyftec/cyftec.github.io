@@ -9,7 +9,8 @@ if (toggle && navLinks) {
 }
 
 const currentPath = window.location.pathname.split("/").pop() || "index.html";
-const activePath = currentPath === "blog-detail.html" ? "blogs.html" : currentPath;
+const activePath =
+  currentPath === "blog-detail.html" ? "blogs.html" : currentPath;
 document.querySelectorAll(".nav-links a").forEach((link) => {
   const href = link.getAttribute("href");
   if (href === activePath) {
@@ -17,13 +18,20 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   }
 });
 
-document.querySelectorAll("form[data-static-form]").forEach((form) => {
+document.querySelectorAll("form[data-mailto-form]").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     const notice = form.querySelector("[data-form-notice]");
+    const formData = new FormData(form);
+    const recipient = form.dataset.recipient || "";
+    const inquiryType = formData.get("type") || "General";
+    const subject = `Inquiry: ${inquiryType}`;
+    const body = formData.get("message") || "";
+
+    window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     if (notice) {
-      notice.textContent = "Thanks. Your message is ready for a static-site form backend.";
+      notice.textContent = "Your email app should open with a prefilled draft.";
     }
-    form.reset();
   });
 });

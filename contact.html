@@ -57,7 +57,7 @@
               enquiry.</p
             >
           </div>
-          <form data-static-form>
+          <form data-mailto-form data-recipient="inquiry@cyfer.tech">
             <label>
               Inquiry type
               <select name="type" required>
@@ -72,18 +72,12 @@
               </select>
             </label>
             <label>
-              Name
-              <input name="name" autocomplete="name" required />
-            </label>
-            <label>
-              Work email
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
-            <label>
               Message
               <textarea name="message" required></textarea>
             </label>
-            <button class="button primary" type="submit">Send message</button>
+            <button class="button primary" type="submit"
+              >Open email draft</button
+            >
             <p data-form-notice aria-live="polite"></p>
           </form>
         </div>
@@ -92,7 +86,7 @@
 
     <footer class="footer"
       ><div class="footer-inner"
-        ><span>Cyfer Tech</span><span>hello@northstarlabs.example</span></div
+        ><span>Cyfer Tech</span><span>inquiry@cyfer.tech</span></div
       ></footer
     >
     <script src="script.js"></script>

@@ -829,7 +829,7 @@ textarea {
 }
 
 textarea {
-  min-height: 138px;
+  min-height: 20rem;
   resize: vertical;
 }
 
