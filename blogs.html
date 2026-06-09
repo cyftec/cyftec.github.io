@@ -50,16 +50,15 @@
             <h1>Bringing fresh perspective and ideas to the tech.</h1>
           </div>
           <p>
-            Practical notes on automation, secure systems, product thinking, and
+            Practical notes on our findings, observations, product thinking, and
             the engineering choices behind reliable technology portfolios.
           </p>
         </div>
         <div class="blog-topics" aria-label="Blog topics">
           <span class="topic-pill">Engineering</span>
-          <span class="topic-pill">Automation</span>
-          <span class="topic-pill">Security</span>
-          <span class="topic-pill">Product strategy</span>
-          <span class="topic-pill">Operations</span>
+          <span class="topic-pill">Product Thinking</span>
+          <span class="topic-pill">Developer Experience</span>
+          <span class="topic-pill">User Empathy</span>
         </div>
       </section>
 
@@ -98,16 +97,14 @@
           <div class="post-content">
             <p class="post-meta"
               ><span>Featured</span><span>8 min read</span
-              ><span>Product engineering</span></p
+              ><span>Product Thinking</span></p
             >
-            <h2
-              >Designing operational software that people can trust under
-              pressure.</h2
-            >
+            <h2>Different types of apps based on the data they geenrate.</h2>
             <p class="lead">
-              Reliability is not only uptime. It is the combination of clear
-              data, predictable workflows, sensible defaults, and interfaces
-              that help teams act without hesitation.
+              There are broadly only 4 types of apps based on the need for data
+              persistence. Computation apps, Communication apps, Digital Content
+              apps and Physical Business apps. This article explore these types
+              in detail along with their examples.
             </p>
             <div class="actions">
               <a class="button primary" href="blog-detail.html"
@@ -121,76 +118,71 @@
       <section class="section">
         <div class="section-head">
           <div>
-            <p class="eyebrow">Latest articles</p>
-            <h2>Notes, guides, and field lessons.</h2>
+            <p class="eyebrow">All articles</p>
+            <h2>Notes, guides, and our field lessons.</h2>
           </div>
         </div>
         <div class="grid three">
           <article class="card blog-card">
             <p class="post-meta"
-              ><span>Automation</span><span>6 min read</span></p
+              ><span>Product Thinking</span><span>6 min read</span></p
+            >
+            <h3>Newsletter apps and their hegemonic architecture.</h3>
+            <p>
+              Newsletter apps are service which publicises user generated
+              content to other users e.g. social media apps. And colocation of
+              all users' data is highly required in such case. Yet the same
+              architecture is imposed on personal and private content apps as
+              well. This article explore why and how did that happen.
+            </p>
+            <a class="button secondary" href="blog-detail.html">Read article</a>
+          </article>
+          <article class="card blog-card">
+            <p class="post-meta"
+              ><span>Developer Experience</span><span>5 min read</span></p
             >
             <h3
-              >Where workflow automation should still leave room for
-              judgment.</h3
+              >Personal content apps and the not so personal data persistence
+              mechanism.</h3
             >
             <p>
-              A practical framework for deciding which operational decisions
-              should be automated and which should stay human-reviewed.
+              First thing any indie developer tries to build is productivity and
+              utility apps. Like a journaling or a health and activity tracker
+              app. Such apps are a type of personal content app. But there's no
+              open-source mechanism out there which utilises user's personal
+              cloud storage as backend for such apps.
             </p>
             <a class="button secondary" href="blog-detail.html">Read article</a>
           </article>
           <article class="card blog-card">
             <p class="post-meta"
-              ><span>Security</span><span>5 min read</span></p
+              ><span>Engineering</span><span>7 min read</span></p
             >
-            <h3>Turning access reviews into a product experience.</h3>
-            <p>
-              How clearer defaults, better context, and simpler evidence trails
-              make governance work easier for busy teams.
-            </p>
-            <a class="button secondary" href="blog-detail.html">Read article</a>
-          </article>
-          <article class="card blog-card">
-            <p class="post-meta"><span>Data</span><span>7 min read</span></p>
-            <h3>What real-time dashboards get wrong about decision speed.</h3>
-            <p>
-              Faster updates only help when teams can understand priority,
-              confidence, ownership, and next actions at a glance.
-            </p>
-            <a class="button secondary" href="blog-detail.html">Read article</a>
-          </article>
-          <article class="card blog-card">
-            <p class="post-meta"><span>Product</span><span>4 min read</span></p>
             <h3
-              >Building a product portfolio without fragmenting the
-              customer.</h3
+              >Smart framework, dumb engineer versus Dumb framework, Smart
+              engineer.</h3
             >
             <p>
-              Shared identity, audit, and design patterns can make multiple
-              products feel like one coherent operating layer.
+              All the mainstream web dev libraries or frameworks out there have
+              grown mature and have accumulated much complexity over time. One
+              crucial side-effect of that is that the engineers working with
+              these frameworks are not completely confident to say that they
+              have a complete command over that framework.
             </p>
             <a class="button secondary" href="blog-detail.html">Read article</a>
           </article>
           <article class="card blog-card">
             <p class="post-meta"
-              ><span>Operations</span><span>6 min read</span></p
+              ><span>Engineering</span><span>4 min read</span></p
             >
-            <h3>Planning for exceptions before they become incidents.</h3>
+            <h3>React is over-engineered, and rightfully so.</h3>
             <p>
-              Exception paths deserve the same care as happy paths because they
-              define how well a system holds up in the real world.
-            </p>
-            <a class="button secondary" href="blog-detail.html">Read article</a>
-          </article>
-          <article class="card blog-card">
-            <p class="post-meta"
-              ><span>Engineering</span><span>9 min read</span></p
-            >
-            <h3>Choosing integration patterns for partner-heavy systems.</h3>
-            <p>
-              A field guide to API, event, batch, and managed sync approaches
-              when your platform depends on external systems.
+              React JS simply started with flux architecture where the UI is
+              nothing but a function of state, UI = f(state). But the HTML's
+              compositional nature along with flux pattern resulted in an
+              architecture where component should re-render when the internal or
+              external state changes. This article explores why that
+              architecture made React complex and over-engineered over time.
             </p>
             <a class="button secondary" href="blog-detail.html">Read article</a>
           </article>
