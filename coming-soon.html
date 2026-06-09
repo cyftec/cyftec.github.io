@@ -42,7 +42,10 @@
     <main>
       <section class="coming-soon" aria-labelledby="coming-soon-title">
         <h1 id="coming-soon-title">Details</h1>
-        <p>details coming soon..</p>
+        <p>
+          <span id="coming-soon-type">details</span>
+          <span>coming soon..</span>
+        </p>
       </section>
     </main>
 
@@ -96,11 +99,17 @@
       const pageTitle = new URLSearchParams(window.location.search).get(
         "title",
       );
-      const heading = document.querySelector("#coming-soon-title");
+      const title = document.querySelector("#coming-soon-title");
 
-      if (pageTitle && heading) {
-        heading.textContent = pageTitle;
+      if (pageTitle && title) {
+        title.textContent = pageTitle;
         document.title = `${pageTitle} | Cyfer Tech`;
+      }
+
+      const pageType = new URLSearchParams(window.location.search).get("type");
+      const type = document.querySelector("#coming-soon-type");
+      if (pageType && type) {
+        type.textContent = pageType;
       }
     </script>
   </body>
