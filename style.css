@@ -183,6 +183,7 @@ h2 {
   font-size: clamp(2rem, 3.6vw, 3.4rem);
   line-height: 1;
   letter-spacing: 0;
+  font-weight: bolder;
 }
 
 .company-title {
@@ -326,7 +327,7 @@ h3 {
 .brand-message {
   position: relative;
   min-height: calc(100vh - 76px);
-  padding: 26px 24px 126px 24px;
+  padding: 6px 24px 146px 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -367,7 +368,7 @@ h3 {
 .scroll-hint {
   position: absolute;
   left: 50%;
-  bottom: 24px;
+  bottom: 4rem;
   width: 3rem;
   height: 3rem;
   display: grid;
@@ -1030,6 +1031,10 @@ textarea {
     min-height: auto;
   }
 
+  .scroll-hint {
+    bottom: 5rem;
+  }
+
   .metrics,
   .grid.three,
   .product-list,
@@ -1093,7 +1098,7 @@ textarea {
   }
 
   .scroll-hint {
-    bottom: 2rem;
+    bottom: 5rem;
   }
 
   .coming-soon {
